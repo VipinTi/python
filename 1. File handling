@@ -2,3 +2,14 @@ try:
     a=b
 except :
     print("number not defined")
+
+
+try:
+    number=int(input('input a number'))
+    result= 10/number
+except :
+    print("excelption ")
+else:
+    print(result)
+finally:
+    print("finalyy block")
