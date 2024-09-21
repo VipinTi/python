@@ -1,0 +1,39 @@
+Classes and Objects
+Object-Oriented Programming (OOP) is a programming paradigm that uses "objects" to design applications and computer programs.
+OOP allows for modeling real-world scenarios using classes and objects.
+This lesson covers the basics of creating classes and objects, including instance variables and methods.
+
+class dog:
+    def __init__(self,name, age):
+        self.name=name
+        self.age=age
+
+    def bark(self):
+        print(f"'{self.name}' says Wooof")
+
+dog1= dog("Ramu",5)
+dog1.bark()
+
+class Bank:
+    def __init__(self,owner,amount):
+        self.owner=owner
+        self.amount=amount
+    
+    def deposit(self,dep):
+        self.amount+=dep
+        print(f"Total Balance : '{self.amount}'")
+
+    def withdraw(self,draw):
+        if(self.amount<draw):
+            print("insufficient balance")
+        else:
+            self.amount-=draw
+            print(f"Total Balance: ''{self.amount}")
+
+    def getBalance(self):
+        print(f"Total balance :'{self.amount}'")
+
+hdfc=Bank("vipin",5000)
+hdfc.deposit(500)
+hdfc.withdraw(300)
+hdfc.getBalance()
