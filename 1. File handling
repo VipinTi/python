@@ -1,0 +1,4 @@
+try:
+    a=b
+except :
+    print("number not defined")
