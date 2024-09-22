@@ -37,3 +37,28 @@ hdfc=Bank("vipin",5000)
 hdfc.deposit(500)
 hdfc.withdraw(300)
 hdfc.getBalance()
+
+
+class Vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+
+class Car(Vehicle):
+    def start_engine(self):
+        return "Car engine started"
+    
+class Motorocycle(Vehicle):
+    def start_engine(self):
+        return "Motor cycle started"
+    
+
+def start_vehicle(Vehicle):
+    print(Vehicle.start_engine())
+
+
+car= Car()
+motorcylce= Motorocycle()
+
+start_vehicle(car)
